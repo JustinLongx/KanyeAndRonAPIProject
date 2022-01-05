@@ -12,11 +12,13 @@ namespace KanyeAndRonAPIProject
     {
         public static void KanyeQuote()
         {
-            var client = new HttpClient();// This will help make a request from the internet.
+            var client = new HttpClient();
+            // Here I create a new instance of the HttpClient class which provides a base class for sending HTTP requests
+            // and receiving HTTP responses from a resource identified by a URL.
             //Make a request and get a response back in JSON form. 
             //Then ill parse it using Name Value pairs to get what I need. 
 
-            var kanyeURL = "https://api.kanye.rest"; //Made a var to hold the URL I need for Kanye quotes.
+            var kanyeURL = "https://api.kanye.rest"; //Made a variable to hold the URL I need for Kanye quotes.
             //The actual URL ill be using for the API.
             //Gives a name value pair
 
@@ -36,6 +38,7 @@ namespace KanyeAndRonAPIProject
             var client = new HttpClient();
 
             var ronURL = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+            //Gives an array
 
             var ronResponse = client.GetStringAsync(ronURL).Result;
 
