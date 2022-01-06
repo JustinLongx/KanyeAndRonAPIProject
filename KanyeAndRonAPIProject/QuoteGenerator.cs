@@ -43,7 +43,7 @@ namespace KanyeAndRonAPIProject
             var ronResponse = client.GetStringAsync(ronURL).Result;
 
             var ronQuote = JArray.Parse(ronResponse).ToString().Replace('[', ' ').Replace(']', ' ').Trim();
-            //Used jArray this time instead of JObject because they are giving me an array.
+            //Used jArray this time instead of JObject because the API is giving me an array.
             //Parse it into a string and replace every [] with nothing and trim off the rest. 
 
             Console.WriteLine($"-----------------");
